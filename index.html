@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js"></script>
+</head>
+<body>
+    <div id="particles-js">
+        <div class="songs">
+            <audio src="./dist/Ed Sheeran - Shape Of You.mp3" class="current-audio"></audio>
+        </div>
+        <div class="left-screen">
+            <div class="visualizer-container">
+                <div class="visualizer">
+                    <div class="visualizer-image"></div>
+                </div>
+            </div>
+            <div class="sound-bar"></div>
+        </div>
+        <div class="main-container">
+            <div class="top-part">
+                <button class="invisible-button drop-down-arrow">
+                    <i class="fa-solid fa-angle-down fa-icons" style="color: #ffffff;"></i>
+                </button>
+                <p id="top-header" class="texts">Player</p>
+                <button class="invisible-button triple-dot">
+                    <i class="fa-solid fa-ellipsis-vertical fa-icons" style="color: #ffffff;"></i>
+                </button>
+            </div>
+            <div class="media-image"></div>
+            <div class="lower-part">
+                <div class="music-title">
+                    <button class="invisible-button dislike-button">
+                        <i class="fa-regular fa-thumbs-down fa-icons" style="color: #ffffff;"></i>
+                    </button>
+                    <p class="song-title">Shape Of You</p>
+                    <button class="invisible-button triple-dot like-button">
+                        <i class="fa-regular fa-thumbs-up fa-icons" style="color: #ffffff;"></i>
+                    </button>
+                </div>
+                <div id="progress-bar-container">
+                    <input type="range" value="0" id="progress-bar">
+                </div>
+                <div id="time-container">
+                    <span id="current-time">00:00</span>
+                    <span id="total-time">03:55</span>
+                </div>
+                <div class="controls">
+                    <button class="invisible-button" id="shuffle-button">
+                        <i class="fa-solid fa-shuffle fa-icons" style="color: #ffffff;"></i>
+                        <div class="shuffle-on"></div>
+                    </button>
+                    <button class="invisible-button" id="previous-button">
+                        <i class="fa-solid fa-backward-step fa-icons" style="color: #ffffff;"></i>
+                    </button>
+                    <button class="invisible-button" id="play-button">
+                        <i class="fa-regular fa-circle-play fa-3x fa-icons" style="color: #ffffff;"></i>
+                    </button>
+                    <button class="invisible-button" id="next-button">
+                        <i class="fa-solid fa-forward-step fa-icons" style="color: #ffffff;"></i>
+                    </button>
+                    <button class="invisible-button" id="repeat-button">
+                        <i class="fa-solid fa-repeat fa-icons" style="color: #ffffff;"></i>
+                        <div class="repeat-on"><span>1</span></div>
+                    </button>
+                </div>
+                <div id="volume-bar-container">
+                    <button class="invisible-button" id="volume-button">
+                        <i class="fa-solid fa-volume-low fa-icons" style="color: #ffffff;"></i>
+                    </button>
+                    <input type="range" value="10" id="volume-bar">
+                </div>
+                <div class="up-next" class="texts">
+                    <span id="next-music-name" class="texts" style="font-family: sans-serif;">
+                        No File Selected
+                    </span>
+                </div>
+            </div>
+        </div> 
+    </div>
+    <div class="burger-container">
+        <div class="middle"></div>
+    </div>
+    <div class="navigation-slider">
+        <div id="song-chooser-container">
+            <p id="song-choose-text">Choose your song</p>
+            <input type="file" name="Choose a song" id="song-chooser" accept="audio/*" multiple>
+        </div>
+        <div class="songs-lists">
+            <p style="position: absolute;left: 20px;">Upcoming Tracks</p>
+        </div>
+        <div class="songs-container"></div>
+    </div>
+</body>
+<script src="./particles.js"></script>
+<script src="./app.js"></script>
+<script src="./script.js"></script>
+<script src="https://kit.fontawesome.com/56d71cbd87.js" crossorigin="anonymous"></script>
+
+</html>
